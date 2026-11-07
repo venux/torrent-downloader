@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>发送到 TorrentDock</title>
+</head>
+<body>
+  <header class="head">
+    <span class="logo">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3.4v10.1m0 0 3.9-4m-3.9 4-3.9-4" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.7 15.5v2.5a2.4 2.4 0 0 0 2.4 2.4h9.8a2.4 2.4 0 0 0 2.4-2.4v-2.5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <div class="titles">
+      <strong>TorrentDock</strong>
+      <span id="status" class="status is-checking"><i></i><em>正在检测…</em></span>
+    </div>
+  </header>
+
+  <main class="body">
+    <label class="label" for="text">磁力链接 / 种子地址</label>
+    <textarea id="text" rows="3" spellcheck="false" placeholder="magnet:?xt=urn:btih:…"></textarea>
+
+    <div class="row">
+      <button id="btn-paste" class="btn btn-ghost">读取剪切板</button>
+      <button id="btn-send" class="btn btn-primary">发送到下载器</button>
+    </div>
+
+    <p id="msg" class="msg" hidden></p>
+
+    <div class="divider"></div>
+
+    <div class="row row-port">
+      <label class="label-inline" for="port">桌面端端口</label>
+      <input id="port" type="number" min="1024" max="65535" />
+      <button id="btn-save" class="btn btn-mini">保存</button>
+    </div>
+    <p class="tip">首次使用请先打开 TorrentDock 桌面应用；端口需与设置里一致。</p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

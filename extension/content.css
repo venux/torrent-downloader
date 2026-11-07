@@ -1,0 +1,57 @@
+/* 页面内注入的按钮与提示（尽量不受宿主页样式影响） */
+
+.tdock-btn {
+  all: unset !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 0 0 5px !important;
+  padding: 0 !important;
+  border-radius: 5px !important;
+  background: linear-gradient(135deg, #5b5bf0, #8b5cf6) !important;
+  color: #fff !important;
+  font: 700 12px/1 -apple-system, "Segoe UI", sans-serif !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  opacity: .78 !important;
+  transition: opacity .15s ease, transform .15s ease !important;
+  box-shadow: 0 1px 4px rgba(91, 91, 240, .45) !important;
+}
+
+.tdock-btn:hover {
+  opacity: 1 !important;
+  transform: translateY(-1px) !important;
+}
+
+.tdock-btn:active {
+  transform: scale(.94) !important;
+}
+
+.tdock-toast {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 28px !important;
+  z-index: 2147483647 !important;
+  transform: translate(-50%, 12px) !important;
+  padding: 10px 16px !important;
+  border-radius: 10px !important;
+  background: #16181f !important;
+  color: #f4f5f7 !important;
+  font: 500 13px/1.4 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  box-shadow: 0 12px 34px -12px rgba(0, 0, 0, .6) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity .18s ease, transform .18s ease !important;
+}
+
+.tdock-toast[data-type="err"] {
+  background: #b42318 !important;
+}
+
+.tdock-toast.is-show {
+  opacity: 1 !important;
+  transform: translate(-50%, 0) !important;
+}

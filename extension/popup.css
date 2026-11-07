@@ -1,0 +1,152 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --soft: #f6f7fb;
+  --border: #e6e8f0;
+  --text: #191b22;
+  --text-2: #5b6273;
+  --text-3: #8e95a6;
+  --accent: #5b5bf0;
+  --accent-2: #8b5cf6;
+  --ok: #10a15a;
+  --danger: #e5484d;
+}
+
+body {
+  width: 348px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 头部 */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #fafbff, #ffffff);
+}
+
+.logo {
+  width: 30px; height: 30px;
+  border-radius: 9px;
+  display: grid; place-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 4px 12px -4px rgba(91, 91, 240, .8);
+  flex: none;
+}
+.logo svg { width: 17px; height: 17px; }
+
+.titles { display: flex; flex-direction: column; gap: 2px; }
+.titles strong { font-size: 13.5px; font-weight: 680; letter-spacing: -.01em; }
+
+.status { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--text-3); }
+.status i { width: 6px; height: 6px; border-radius: 50%; background: #c9cdd8; }
+.status em { font-style: normal; }
+.status.is-on i { background: var(--ok); box-shadow: 0 0 0 3px rgba(16, 161, 90, .13); }
+.status.is-on em { color: var(--ok); }
+.status.is-off i { background: var(--danger); box-shadow: 0 0 0 3px rgba(229, 72, 77, .12); }
+.status.is-off em { color: var(--danger); }
+
+/* 主体 */
+.body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+
+.label { font-size: 11.5px; font-weight: 620; color: var(--text-2); }
+
+textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  color: var(--text);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 62px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91, 91, 240, .12);
+  background: #fff;
+}
+
+.row { display: flex; gap: 8px; }
+
+.btn {
+  flex: 1;
+  height: 34px;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 620;
+  cursor: pointer;
+  transition: transform .12s ease, filter .15s ease, background .15s ease;
+}
+.btn:active { transform: scale(.98); }
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 16px -8px rgba(91, 91, 240, .9);
+}
+.btn-primary:hover { filter: brightness(1.06); }
+
+.btn-ghost {
+  color: var(--text-2);
+  background: var(--soft);
+  border: 1px solid var(--border);
+  flex: 0 0 108px;
+}
+.btn-ghost:hover { color: var(--text); background: #f0f1f8; }
+
+.btn-mini {
+  flex: 0 0 auto;
+  height: 28px;
+  padding: 0 11px;
+  font-size: 12px;
+  color: var(--text-2);
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
+.btn-mini:hover { color: var(--text); }
+
+.msg {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.msg[data-type="ok"] { background: #e9f8f0; color: #0b7a44; }
+.msg[data-type="err"] { background: #fdecec; color: #b42318; }
+
+.divider { height: 1px; background: var(--border); margin: 4px 0 6px; }
+
+.row-port { align-items: center; gap: 8px; }
+.label-inline { font-size: 12px; color: var(--text-2); flex: 1; }
+
+#port {
+  width: 84px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  font-size: 12px;
+  color: var(--text);
+  outline: none;
+  font-variant-numeric: tabular-nums;
+}
+#port:focus { border-color: var(--accent); }
+
+.tip { font-size: 11px; color: var(--text-3); line-height: 1.6; }

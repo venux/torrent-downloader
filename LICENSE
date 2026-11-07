@@ -1,0 +1,44 @@
+# TorrentDock — 个人学习许可 (Personal Learning License)
+
+Copyright (c) 2026 TorrentDock contributors. All rights reserved.
+
+## 中文
+
+本项目（以下简称"本软件"）源代码仅开放用于**个人学习、技术研究与交流**目的。
+
+### 允许
+
+1. 个人出于学习目的阅读、下载、编译、运行本软件。
+2. 个人在非公开场合修改本软件以学习其实现原理。
+3. 转载、引用本软件的部分代码用于学习笔记或技术文章，但须注明出处并附上本许可。
+
+### 禁止
+
+1. **禁止任何形式的商业使用**，包括但不限于：销售本软件或其修改版、将其集成进商业产品、用于付费服务、用于获取广告或流量收益、用于企业内部经营活动。
+2. **禁止用于任何违法犯罪活动**，包括但不限于：传播或获取法律法规禁止的内容、侵犯他人知识产权、传播恶意软件、实施网络攻击、规避技术保护措施。
+3. 禁止移除或修改本软件中的版权声明与本许可声明。
+4. 禁止将本软件用于任何违反使用者所在地法律法规的用途。
+
+### 免责声明
+
+本软件按"现状"提供，不附带任何明示或暗示的担保，包括但不限于对适销性、特定用途适用性和非侵权性的担保。
+
+本软件仅为 BitTorrent 协议的客户端实现，**不提供、不托管、不索引、不分发任何内容**，所有下载内容均来自使用者自行添加的链接与第三方网络节点。
+
+**使用者须自行承担使用本软件的全部风险与全部法律责任。** 作者与贡献者对使用者使用本软件所产生的任何直接或间接损失、法律纠纷、行政处罚、第三方索赔概不负责，亦不承担任何连带责任。
+
+若你不同意上述任一条件，请立即停止使用并删除本软件的全部副本。
+
+---
+
+## English
+
+This project is provided **for personal study and research only**.
+
+**You may** read, compile and run it for personal learning, and quote small portions with attribution.
+
+**You may NOT** (1) use it commercially in any form — selling it, bundling it into a commercial product, using it in paid services, or monetizing it through ads/traffic; (2) use it for any illegal activity, including distributing or obtaining unlawful content, infringing intellectual property, spreading malware, or attacking networks; (3) remove this notice.
+
+**Disclaimer.** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. It is merely a BitTorrent protocol client and hosts, indexes and distributes no content. **You bear sole responsibility and all legal liability for how you use it.** The authors and contributors accept no liability whatsoever for any loss, legal dispute or claim arising from its use.
+
+If you do not agree with any of the above, stop using the software and delete all copies immediately.

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "TorrentDock 发送器",
+  "version": "1.0.0",
+  "description": "把磁力链接、种子链接一键发送到本机的 TorrentDock 下载器；自动识别剪切板与页面里的磁力链接。",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "notifications",
+    "clipboardRead",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "发送到 TorrentDock",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
